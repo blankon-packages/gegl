@@ -1,0 +1,2 @@
+version=3
+http://ftp.gtk.org/pub/gegl/([\d\.]+)/gegl-(.+)\.tar\.bz2

@@ -1,0 +1,27 @@
+From bad4fae4eaed2cfb5699d96f45cceca534f751f2 Mon Sep 17 00:00:00 2001
+From: Tim Lunn <tim@feathertop.org>
+Date: Mon, 30 Mar 2015 08:19:19 +1100
+Subject: [PATCH] tests: fix missing string format argument
+
+This causes a build failure when building with -Werror=format-security
+---
+ tests/simple/test-gegl-color.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tests/simple/test-gegl-color.c b/tests/simple/test-gegl-color.c
+index 4c5bdbe..36db071 100644
+--- a/tests/simple/test-gegl-color.c
++++ b/tests/simple/test-gegl-color.c
+@@ -47,7 +47,7 @@ assert_compare_rgba(const gdouble actual[4], const gdouble expect[4])
+                 actual[0], actual[1], actual[2], actual[3],
+                 expect[0], expect[1], expect[2], expect[3]
+         );
+-        g_error(str);
++        g_error("%s", str);
+     }
+     g_assert(colors_equal);
+ }
+-- 
+2.1.4
+
+
