@@ -1,3 +1,2 @@
-#0001-Fix_CVE-2012-4433.patch
-#ruby1.9.diff
-fix_missing_string_format_argument.patch
+0001-Fix_CVE-2012-4433.patch
+0002-Port_gegl_forward_to_libav54.patch

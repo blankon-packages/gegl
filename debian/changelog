@@ -1,38 +1,25 @@
-gegl (0.3.0~git20150329.9b14848c-0blankon1) tambora; urgency=medium
+gegl (0.2.0-7.1blankon1) tambora; urgency=medium
 
-  * New upstream release
-  * Import from PPA GNOOME3-TEAM
+  * Rebuild 
 
- -- Mahyuddin <yudi.al@gmail.com>  Sun, 31 May 2015 21:57:04 +0700
+ -- Mahyuddin <yudi.al@gmail.com>  Fri, 21 Aug 2015 05:23:27 +0700
 
-gegl (0.3.0~git20150329.9b14848c-0ubuntu1~vivid3) vivid; urgency=medium
+gegl (0.2.0-7.1) unstable; urgency=medium
 
-  * New upstream release
-  * Add and bump build-deps as per configure.ac
-  * Soname bump
-  * Update symbols
-  * debian/rules: disable tests for now
-  * debian/patches:
-    - fix_missing_string_format_argument.patch: fix build failure
-  * debian/libgegl-doc.docs: don't install gallery
-  * debian/gegl.install: don't install binary that would break co-install
-    with 0.2
-  
- -- Tim Lunn <tim@feathertop.org>  Sun, 29 Mar 2015 14:23:31 +1100
+  * Non-maintainer upload, backporting experimental changes to
+    unstable for the libstdc++ transition.
 
-gegl (0.2.0-7ubuntu1) vivid; urgency=low
+  [ Mattio F. Vescovi ]
+  * Fix FTBFS with g++/gcc v5 (Closes: #777870)
+    - debian/libgegl-0.2-0.symbols: symbols updated
+  * debian/copyright: entries updated
+  * debian/copyright: debian/ copyright updated
+  * debian/control: S-V bump 3.9.5 => 3.9.6 (no changes needed)
+  * debian/control: Maintainer e-mail address updated
+  * debian/control: Multi-Arch set for -dbg package
+  * debian/control: {shlibs:Depends} added for -dev package
 
-  * Merge from Debian unstable. (LP: #1422514) Remaining changes:
-    - debian/control:
-      + Drop Build-Depends on libopenraw-dev (in universe).
-      + Drop Build-Depends on libavcodec-dev
-        (can't be shipped on the CDs).
-      + Drop Build-Depends on libavformat-dev, otherwise
-        libavcodec-dev is still pulled in.
-    - debian/patches/ruby1.9.diff:
-      + Fix build failure with ruby1.9.
-
- -- Artur Rona <ari-tczew@ubuntu.com>  Mon, 16 Feb 2015 23:32:13 +0100
+ -- Simon McVittie <smcv@debian.org>  Tue, 18 Aug 2015 12:00:47 +0100
 
 gegl (0.2.0-7) unstable; urgency=medium
 
@@ -57,18 +44,6 @@ gegl (0.2.0-5) unstable; urgency=medium
 
  -- Matteo F. Vescovi <mfvescovi@gmail.com>  Tue, 06 May 2014 08:23:57 +0200
 
-gegl (0.2.0-4ubuntu1) trusty; urgency=medium
-
-  * Merge with Debian; remaining changes:
-    - Drop Build-Depends on libopenraw-dev (in universe).
-    - Drop Build-Depends on libavcodec-dev (can't be shipped on the CDs).
-    - Drop Build-Depends on libavformat-dev, otherwise libavcodec-dev is
-      still pulled in.
-  * Build using dh-autoreconf.
-  * Fix build failure with ruby1.9.
-
- -- Matthias Klose <doko@ubuntu.com>  Sat, 28 Dec 2013 20:27:39 +0100
-
 gegl (0.2.0-4) unstable; urgency=low
 
   * debian/patches/: patchset updated
@@ -77,23 +52,6 @@ gegl (0.2.0-4) unstable; urgency=low
     - 0002-Port_gegl_forward_to_libav54.patch added (Closes: #721533)
 
  -- Matteo F. Vescovi <mfv.debian@gmail.com>  Mon, 09 Sep 2013 17:40:09 +0200
-
-gegl (0.2.0-3ubuntu2) trusty; urgency=medium
-
-  * Rebuild for suitesparse 4.2.1.
-
- -- Colin Watson <cjwatson@ubuntu.com>  Mon, 23 Dec 2013 14:14:19 +0000
-
-gegl (0.2.0-3ubuntu1) saucy; urgency=low
-
-  * Sync with Debiam unstable (LP: #1189536). Remaining changes:
-    - debian/control:
-      + Drop Build-Depends on libopenraw-dev (in universe).
-      + Drop Build-Depends on libavcodec-dev (can't be shipped on the CDs).
-      + Drop Build-Depends on libavformat-dev, otherwise libavcodec-dev is
-        still pulled in.
-
- -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 10 Jun 2013 12:06:21 -0400
 
 gegl (0.2.0-3) unstable; urgency=low
 

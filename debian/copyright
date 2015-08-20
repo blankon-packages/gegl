@@ -3,17 +3,17 @@ Upstream-Name: gegl
 Upstream-Contact: Øyvind Kolås <pippin@gimp.org>
 Source: http://www.gegl.org
 
-Files: debian/*
-Copyright: 2007, Étienne Bersac <bersace03@laposte.net>
-           2012, Matteo F. Vescovi <mfv.debian@gmail.com>
+Files: *
+Copyright: 2005, Øyvind Kolås <pippin@gimp.org>
 License: LGPL-3
 
 Files: gegl/*
 Copyright: 2005, Øyvind Kolås <pippin@gimp.org>
 License: GPL-3
 
-Files: *
-Copyright: 2005, Øyvind Kolås <pippin@gimp.org>
+Files: debian/*
+Copyright: 2007, Étienne Bersac <bersace03@laposte.net>
+           2012-2015, Matteo F. Vescovi <mfv@debian.org>
 License: LGPL-3
 
 License: LGPL-3

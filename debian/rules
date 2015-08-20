@@ -11,9 +11,9 @@ include /usr/share/cdbs/1/rules/autoreconf.mk
 
 export LDFLAGS += -Wl,--as-needed
 
-DEB_DH_MAKESHLIBS_ARGS_libgegl-0.3-0 += \
-	-V'libgegl-0.3-0 (>= 0.3.0)' \
-	-X/usr/lib/$(DEB_HOST_MULTIARCH)/gegl-0.3
+DEB_DH_MAKESHLIBS_ARGS_libgegl-0.2-0 += \
+	-V'libgegl-0.2-0 (>= 0.2.0)' \
+	-X/usr/lib/$(DEB_HOST_MULTIARCH)/gegl-0.2
 
 DEB_CONFIGURE_EXTRA_FLAGS += \
 	--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
@@ -21,8 +21,6 @@ DEB_CONFIGURE_EXTRA_FLAGS += \
 	--disable-sse
 
 DEB_BUILD_PARALLEL = 1
-binary-install/gegl::
-	rm -f debian/$(cdbs_curpkg)/usr/bin/gegl
 
 binary-install/libgegl-doc::
 	find debian/$(cdbs_curpkg)/usr/share/doc/$(cdbs_curpkg)/ -name Makefile\* -delete
